@@ -1,0 +1,24 @@
+/* =========================================
+   RESETEO GLOBAL Y LAYOUT (/css/main.css)
+   ========================================= */
+
+/* 1. Quitamos los márgenes molestos que pone el navegador a TODO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Fundamental para que los bordes y paddings no rompan el tamaño */
+}
+
+/* 2. Truco Maestro: Hacemos que el Body sea un Flexbox de altura completa */
+body {
+  min-height: 100vh; /* El alto mínimo es el 100% de la ventana (Viewport Height) */
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif; /* Tu tipografía base */
+}
+
+/* 3. Hacemos que el contenido principal "crezca" y empuje al footer hacia abajo */
+main {
+  flex: 1; /* Esta es la magia: obliga al main a ocupar todo el espacio sobrante */
+  padding: 2rem; /* Un respiro para que tus textos no se peguen a las paredes */
+}

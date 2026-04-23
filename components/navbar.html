@@ -1,19 +1,30 @@
 <nav class="navbar">
   <div class="nav-brand">
-    <!-- Aquí iría el logo de la UNAC / FIME -->
-    <a href="/index.html">
-      <img src="/assets/img/logo-unac.png" alt="Posgrado FIME UNAC" class="logo">
+    <a href="/index.html" class="logo-link">
+      <!-- Puedes usar texto por ahora si no tienes la imagen -->
+      <span class="logo-text">Posgrado FIME</span>
     </a>
+    
+    <!-- Botón que solo aparecerá en celulares -->
+    <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menú">
+      ☰
+    </button>
   </div>
   
-  <ul class="nav-links">
+  <!-- Contenedor de enlaces -->
+  <ul class="nav-links" id="nav-links-menu">
     <li><a href="/index.html">Inicio</a></li>
-    <li><a href="/programas.html">Programas de Maestría</a></li>
+    <li><a href="/programas.html">Maestrías</a></li>
     <li><a href="/admision.html">Admisión 2026</a></li>
     <li><a href="/contacto.html">Contacto</a></li>
+    <!-- Botón de postular dentro del menú para móviles -->
+    <li class="mobile-only">
+        <a href="/admision.html" class="btn-primary">Postular Ahora</a>
+    </li>
   </ul>
 
-  <div class="nav-actions">
+  <!-- Botón de postular en escritorio -->
+  <div class="nav-actions desktop-only">
     <a href="/admision.html" class="btn-primary">Postular Ahora</a>
   </div>
 </nav>
