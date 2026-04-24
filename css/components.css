@@ -1,178 +1,112 @@
-/* =========================================
-   ESTILOS DEL FOOTER (/css/components.css)
-   ========================================= */
-
-.footer {
-  background-color: #0b2341; /* Azul institucional oscuro */
-  color: #ffffff;
-  padding: 3rem 0 0 0;
-  font-family: Arial, sans-serif;
+:root {
+    --fime-blue: #0D5271; /* Color institucional azul marino */
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 0 2rem 2rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-col h4 {
-  color: #f1c40f; /* Acento dorado/amarillo */
-  margin-bottom: 1.5rem;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-
-.footer-col p {
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
-  color: #d1d5db;
-}
-
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-col ul li {
-  margin-bottom: 0.8rem;
-}
-
-.footer-col ul li a {
-  color: #d1d5db;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-col ul li a:hover {
-  color: #f1c40f; /* Cambia a dorado al pasar el mouse */
-}
-
-.footer-bottom {
-  background-color: #07162c; /* Fondo más oscuro para la base */
-  text-align: center;
-  padding: 1.5rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #9ca3af;
-}
-
-/* =========================================
-   ESTILOS DEL NAVBAR (/css/components.css)
-   ========================================= */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: sticky; /* Hace que el menú se quede pegado arriba al hacer scroll */
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-brand {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo-text {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #0b2341;
-  text-decoration: none;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #374151;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #0b2341;
-  border-bottom: 2px solid #f1c40f; /* Subrayado institucional al pasar el mouse */
-}
-
-/* Estilos para el botón principal */
-.btn-primary {
-  background-color: #f1c40f; /* Dorado institucional */
-  color: #0b2341;
-  padding: 0.6rem 1.5rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #d4ac0d;
-}
-
-.menu-toggle {
-  display: none; /* Oculto en escritorio */
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #0b2341;
-}
-
-.mobile-only {
-  display: none;
-}
-
-/* =========================================
-   RESPONSIVE DESIGN (Para Celulares)
-   ========================================= */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-
-  .nav-brand {
+/* Contenedor principal del navbar */
+.fime-header-wrapper {
+    height: 90px;
     width: 100%;
-  }
+    z-index: 1050;
+    border-bottom: 1px solid #e0e0e0;
+}
 
-  .menu-toggle {
-    display: block; /* Mostramos el botón hamburguesa */
-  }
+/* Bloque azul de la izquierda */
+.fime-logo-container {
+    background-color: var(--fime-blue);
+    height: 100%;
+    min-width: 320px; /* Ancho para dar espacio al logo */
+    justify-content: center;
+}
 
-  .desktop-only {
-    display: none; /* Ocultamos el botón de escritorio */
-  }
+.fime-logo {
+    max-height: 60px;
+    width: auto;
+}
 
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
-    padding-top: 1rem;
-    display: none; /* Oculto por defecto en celular */
-  }
+.fime-text-blue {
+    color: var(--fime-blue);
+}
 
-  /* Esta clase se añadirá con JavaScript al hacer clic en la hamburguesa */
-  .nav-links.active {
-    display: flex; 
-  }
+/* --- ESTILOS DE LOS ENLACES --- */
+.custom-nav-links {
+    height: 100%;
+}
 
-  .mobile-only {
-    display: block;
-    margin-top: 1rem;
-  }
+.custom-nav-links .nav-link {
+    color: var(--fime-blue) !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 10px !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid transparent; /* Línea invisible por defecto */
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+/* Efecto Hover y Activo (La línea azul abajo como en tu imagen) */
+.custom-nav-links .nav-link:hover,
+.custom-nav-links .nav-link.active {
+    border-bottom: 4px solid var(--fime-blue);
+    font-weight: 600;
+}
+
+/* Modificadores de la flecha del dropdown para que luzca delicada */
+.custom-nav-links .dropdown-toggle::after {
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+/* --- BOTONES OUTLINE (Admisión y Contáctanos) --- */
+.btn-fime-outline {
+    border: 1px solid var(--fime-blue);
+    color: var(--fime-blue);
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 24px;
+    border-radius: 0; /* Bordes cuadrados exactos a la imagen */
+    transition: all 0.3s ease;
+    width: 100%; /* Para móvil */
+}
+
+.btn-fime-outline:hover {
+    background-color: var(--fime-blue);
+    color: #ffffff;
+}
+
+/* --- ADAPTACIÓN MÓVIL --- */
+@media (max-width: 991px) {
+    .fime-header-wrapper {
+        height: auto;
+        min-height: 75px;
+    }
+    
+    .fime-logo-container {
+        height: 75px;
+        min-width: auto;
+    }
+    
+    .custom-nav-links .nav-link {
+        height: auto;
+        padding: 15px 10px !important;
+        border-bottom: 1px solid #eeeeee;
+        justify-content: flex-start;
+    }
+
+    .custom-nav-links .nav-link:hover,
+    .custom-nav-links .nav-link.active {
+        border-bottom: 1px solid #eeeeee;
+        border-left: 4px solid var(--fime-blue); /* En móvil la línea va a la izquierda */
+        background-color: #f8f9fa;
+    }
+    
+    .btn-fime-outline {
+        text-align: center;
+        max-width: 300px;
+    }
 }

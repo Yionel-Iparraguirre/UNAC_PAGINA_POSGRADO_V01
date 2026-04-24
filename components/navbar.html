@@ -1,30 +1,53 @@
-<nav class="navbar">
-  <div class="nav-brand">
-    <a href="/index.html" class="logo-link">
-      <!-- Puedes usar texto por ahora si no tienes la imagen -->
-      <span class="logo-text">Posgrado FIME</span>
-    </a>
-    
-    <!-- Botón que solo aparecerá en celulares -->
-    <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menú">
-      ☰
-    </button>
-  </div>
-  
-  <!-- Contenedor de enlaces -->
-  <ul class="nav-links" id="nav-links-menu">
-    <li><a href="/index.html">Inicio</a></li>
-    <li><a href="/programas.html">Maestrías</a></li>
-    <li><a href="/admision.html">Admisión 2026</a></li>
-    <li><a href="/contacto.html">Contacto</a></li>
-    <!-- Botón de postular dentro del menú para móviles -->
-    <li class="mobile-only">
-        <a href="/admision.html" class="btn-primary">Postular Ahora</a>
-    </li>
-  </ul>
-
-  <!-- Botón de postular en escritorio -->
-  <div class="nav-actions desktop-only">
-    <a href="/admision.html" class="btn-primary">Postular Ahora</a>
-  </div>
-</nav>
+<div class="fime-header-wrapper shadow-sm fixed-top bg-white">
+    <nav class="navbar navbar-expand-lg p-0 h-100">
+        <div class="container-fluid p-0 h-100 d-flex align-items-stretch">
+            
+            <!-- ZONA IZQUIERDA: Bloque Azul con Logo -->
+            <div class="fime-logo-container d-flex align-items-center">
+                <a href="index.html" class="navbar-brand m-0 px-4">
+                    <!-- Cambia src por tu logo blanco de FIME -->
+                    <img src="img/logo-fime-blanco.png" alt="FIME UNAC" class="fime-logo">
+                </a>
+            </div>
+            
+            <!-- Botón Hamburguesa (Móvil) -->
+            <button class="navbar-toggler me-3 my-auto ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#fimeMenu">
+                <i class="fa fa-bars fime-text-blue"></i>
+            </button>
+            
+            <!-- ZONA DERECHA: Enlaces y Botones -->
+            <div class="collapse navbar-collapse bg-white pe-lg-4" id="fimeMenu">
+                
+                <!-- Enlaces Centrales -->
+                <div class="navbar-nav mx-auto align-items-lg-center custom-nav-links text-center text-lg-start">
+                    
+                    <div class="nav-item dropdown px-2">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">UPG FIME</a>
+                        <!-- Submenú aquí -->
+                    </div>
+                    
+                    <div class="nav-item dropdown px-2">
+                        <!-- Añadimos 'active-placeholder' temporalmente para simular tu imagen -->
+                        <a href="#" class="nav-link dropdown-toggle active active-placeholder" data-bs-toggle="dropdown">Programas<br class="d-none d-lg-block"> Académicos</a>
+                    </div>
+                    
+                    <div class="nav-item dropdown px-2">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Flujograma<br class="d-none d-lg-block"> de admisión</a>
+                    </div>
+                    
+                    <div class="nav-item dropdown px-2">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Matricula</a>
+                    </div>
+                    
+                </div>
+                
+                <!-- Botones Finales -->
+                <div class="d-flex flex-column flex-lg-row align-items-center gap-3 ms-lg-auto my-3 my-lg-0 pb-3 pb-lg-0 px-3 px-lg-0">
+                    <a href="admision.html" class="btn btn-fime-outline">Admisión</a>
+                    <a href="contacto.html" class="btn btn-fime-outline">Contáctanos</a>
+                </div>
+                
+            </div>
+        </div>
+    </nav>
+</div>
