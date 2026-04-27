@@ -20,5 +20,56 @@ body {
 /* 3. Hacemos que el contenido principal "crezca" y empuje al footer hacia abajo */
 main {
   flex: 1; /* Esta es la magia: obliga al main a ocupar todo el espacio sobrante */
-  padding: 2rem; /* Un respiro para que tus textos no se peguen a las paredes */
+  padding: 0; /* Un respiro para que tus textos no se peguen a las paredes */
+}
+
+.hero-carousel {
+    width: 100%;
+    height: 100vh; /* Pantalla completa */
+    overflow: hidden;
+}
+
+.hero-carousel .carousel,
+.hero-carousel .carousel-inner,
+.hero-carousel .carousel-item {
+    height: 100vh;
+}
+
+.hero-carousel img {
+    height: 100vh;
+    object-fit: cover; /* Ajusta sin deformar */
+}
+
+.carousel-caption {
+    bottom: 30%;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+
+.carousel-caption h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.carousel-caption p {
+    font-size: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 1.8rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+.carousel-inner {
+    position: relative;
+    z-index: 0;
+}
+
+.fime-header-wrapper {
+    z-index: 9999;
 }

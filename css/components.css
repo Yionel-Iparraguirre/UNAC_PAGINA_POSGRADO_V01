@@ -110,3 +110,186 @@
         max-width: 300px;
     }
 }
+
+/* NAVBAR TRANSPARENTE INICIAL */
+.fime-header-wrapper {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+/* CUANDO HACES SCROLL */
+.fime-header-wrapper.scrolled {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* SOLO EN DESKTOP Y CUANDO NO HAY SCROLL */
+@media (min-width: 992px) {
+    .fime-header-wrapper:not(.scrolled) .nav-link,
+    .fime-header-wrapper:not(.scrolled) .btn-fime-outline {
+        color: white;
+        border-color: white;
+    }
+}
+
+/* CUANDO SCROLL → TEXTO OSCURO */
+.fime-header-wrapper.scrolled .nav-link,
+.fime-header-wrapper.scrolled .btn-fime-outline {
+    color: #0d2c6c; /* tu azul */
+    border-color: #0d2c6c;
+}
+
+/* HERO FULL SCREEN */
+.hero-carousel {
+    height: 100vh;
+    position: relative;
+}
+
+/* IMAGEN */
+.hero-carousel img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* OVERLAY OSCURO (CLAVE PARA LEGIBILIDAD) */
+.hero-carousel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+/* CONTENIDO ENCIMA */
+.carousel-caption {
+    z-index: 2;
+}
+
+/* OPCIONAL: SUAVIZA TEXTO */
+.carousel-caption h1,
+.carousel-caption p {
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+/* Fondo blanco SOLO cuando el menú está abierto en móvil */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: white;
+    }
+}
+
+/* ===============================
+   SECCIÓN PROGRAMAS
+================================= */
+
+.programas-section {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* LADO IZQUIERDO */
+.programas-left {
+    background: #f5f5f5;
+    padding: 80px;
+}
+
+.programas-left .subtitulo {
+    font-size: 14px;
+    color: #666;
+}
+
+.programas-left h2 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #2c4a5a;
+    margin-bottom: 40px;
+}
+
+/* LISTA */
+.lista-programas .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lista-programas .item span {
+    font-size: 14px;
+    color: #2c4a5a;
+}
+
+.lista-programas .item i {
+    color: #2c4a5a;
+}
+
+/* HOVER */
+.lista-programas .item:hover {
+    padding-left: 10px;
+    color: #0D5271;
+}
+
+/* LADO DERECHO */
+.programas-right {
+    position: relative;
+    background: url('../img/slide2.jpg') center/cover no-repeat;
+}
+
+/* OVERLAY */
+.programas-right::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+/* TARJETA */
+.card-info {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 40px;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.card-info h3 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.card-info p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    .programas-left {
+        padding: 40px 20px;
+    }
+
+    .programas-left h2 {
+        font-size: 28px;
+    }
+
+    .programas-right {
+        height: 400px;
+    }
+
+    .card-info {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 20px;
+    }
+}
