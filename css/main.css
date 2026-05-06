@@ -21,6 +21,7 @@ body {
 main {
   flex: 1; /* Esta es la magia: obliga al main a ocupar todo el espacio sobrante */
   padding: 0; /* Un respiro para que tus textos no se peguen a las paredes */
+  margin-top: 90px; /* altura del navbar */
 }
 
 .hero-carousel {
@@ -37,6 +38,7 @@ main {
 
 .hero-carousel img {
     height: 100vh;
+    filter: brightness(0.75);
     object-fit: cover; /* Ajusta sin deformar */
 }
 
@@ -73,3 +75,49 @@ main {
 .fime-header-wrapper {
     z-index: 9999;
 }
+
+.proposito-section {
+    background: #ffffff;
+}
+
+/* TÍTULOS */
+.titulo {
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #0D5271;
+}
+
+/* TEXTO */
+.bloque-proposito p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* IMÁGENES */
+.img-escalera {
+    width: 100%;
+    max-width: 477px;
+    height: 545px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* EFECTO ESCALERA */
+.img-1 {
+    margin-top: 0;
+}
+
+.img-2 {
+    margin-top: 40px;
+}
+
+.img-3 {
+    margin-top: 80px;
+}
+
+/* ESPACIADO ENTRE BLOQUES */
+.bloque-proposito {
+    margin-bottom: 60px;
+}
+
