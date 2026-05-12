@@ -179,72 +179,60 @@
     z-index: 2;
 }
 
-/* ===== UPG SUBMENÚ (SIN CAMBIAR LÓGICA) ===== */
-.upg-menu {
-    position: relative;
-}
-
+/* ===== UPG SUBMENÚ (Ajuste de Integración) ===== */
 .upg-submenu {
-    position: fixed;
-    top: 90px;
-    left: 0;
-    width: 100%;
-    background: #f8f9fa;
-    border-top: 1px solid #ddd;
-
+    position: absolute; /* Cambiado de fixed a absolute para que dependa del botón */
+    top: 100%; /* Justo debajo del texto 'UPG FIME' */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px); /* Centrado y un poco hacia abajo */
+    width: auto; /* Que no ocupe toda la pantalla */
+    min-width: 250px;
+    background: #ffffff;
+    border-top: 3px solid var(--fime-blue);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    
     display: flex;
-    justify-content: center;
-    gap: 60px;
-    padding: 20px 30px;
+    flex-direction: column; /* Lista vertical en lugar de horizontal */
+    gap: 0; 
+    padding: 10px 0;
 
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
     transition: all 0.3s ease;
     z-index: 999;
 }
 
-.upg-menu:hover .upg-submenu,
-.upg-submenu:hover {
+/* Hover para mostrarlo */
+.upg-menu:hover .upg-submenu {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
 }
 
+/* Enlaces del submenú estilo lista */
 .upg-submenu a {
-    text-decoration: none;
-    color: #333;
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    position: relative;
-}
-
-.upg-submenu a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 0;
-    height: 3px;
-    background: #1e3a8a;
-    transition: 0.3s;
-}
-
-.upg-submenu a:hover::after,
-.upg-submenu a.active::after {
+    padding: 12px 20px;
+    text-align: left;
+    display: block;
     width: 100%;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.upg-submenu a:last-child {
+    border-bottom: none;
 }
 
 .upg-submenu a:hover {
-    color: #1e3a8a;
-}
-
-.upg-submenu a.active {
+    background-color: #f8f9fa;
     color: var(--fime-blue);
-    font-weight: 700;
 }
 
+/* Quitar la línea animada de antes si no te gustó */
+.upg-submenu a::after {
+    display: none;
+}
 /* ===== ADMISION ===== */
 .admision-grid {
     overflow: hidden;

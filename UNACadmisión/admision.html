@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admisión | FIME UNAC</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+    <!-- SUBNAV -->
+    <div class="admision-subnav">
+        <div class="admision-subnav-container">
+            <a href="admision.html" class="active">Ventana Principal</a>
+            <a href="journey.html">Journey del Postulante</a>
+            <a href="normativa.html">Normativa</a>
+            <a href="financiamiento.html">Financiamiento</a>
+            <a href="faq.html">Preguntas Frecuentes</a>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <div id="header-container"></div>
+
+    <!-- CONTENIDO -->
+    <main>
+
+        <!-- GRID -->
+        <section class="admision-grid">
+
+            <!-- FILA 1 -->
+            <div class="container-fluid p-0">
+                <div class="row g-0 align-items-center">
+
+                    <div class="col-md-6">
+                        <div class="grid-img-wrapper">
+                            <img src="../img/admision1.webp"
+                                 alt="Búsqueda de programas"
+                                 class="img-fluid w-100">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="grid-text-content">
+
+                            <h3>Búsqueda de Programas</h3>
+
+                            <p>
+                                Aquí encontrarás la información que necesitas para iniciar tu camino
+                                en la FIME. Escoge con calma tu programa y sigue nuestras instrucciones
+                                para completar con éxito tu inscripción.
+                            </p>
+
+                            <a href="#" class="btn btn-admision-blue">
+                                ENTÉRATE MÁS >
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- FILA 2 -->
+            <div class="container-fluid p-0">
+                <div class="row g-0 align-items-center flex-md-row-reverse">
+
+                    <div class="col-md-6">
+                        <div class="grid-img-wrapper">
+                            <img src="../img/admision2.webp"
+                                 alt="Normativa"
+                                 class="img-fluid w-100">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="grid-text-content">
+
+                            <h3>Normativa</h3>
+
+                            <p>
+                                La consecución de estudios en la Unidad de Posgrado es una decisión
+                                personal importante. Es por ello que resulta necesario conocer el
+                                contenido de la siguiente <strong>NORMATIVA</strong>.
+                            </p>
+
+                            <a href="#" class="btn btn-admision-blue">
+                                ENTÉRATE MÁS >
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- INSCRIPCIONES -->
+        <section class="inscripciones-banner">
+
+            <div class="overlay-dark">
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6">
+
+                            <div class="inscripciones-content text-white">
+
+                                <h2>Inscripciones Online</h2>
+
+                                <p>
+                                    ¡Felicitaciones! Has tomado una gran decisión:
+                                    iniciar tus estudios en la Unidad de Posgrado de la FIME.
+                                </p>
+
+                                <a href="#" class="btn btn-admision-blue">
+                                    INSCRÍBETE AQUÍ >
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section text-center text-white">
+
+            <div class="container">
+
+                <div class="faq-icon mb-3">
+                    <i class="fa-regular fa-circle-question fa-3x"></i>
+                </div>
+
+                <h2>Preguntas Frecuentes</h2>
+
+                <p>
+                    Aquí podrás encontrar más preguntas sobre admisión.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-container"></div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- NAVBAR -->
+    <script src="../js/navbar.js"></script>
+
+    <!-- FOOTER -->
+    <script>
+    fetch('../components/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        });
+    </script>
+
+</body>
+</html>
